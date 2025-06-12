@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-dark text-white text-center p-4">
+    <h1>Welcome to My Profile</h1>
+  </header>
+
+  <!-- Alert -->
+  <div class="container mt-3">
+    <div class="alert alert-success" role="alert">
+      Hello! This is my personal profile built with Bootstrap.
+    </div>
+  </div>
+
+  <!-- Profile Card Section -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top img-fluid" alt="Profile Photo">
+          <div class="card-body">
+            <h5 class="card-title">Lakshmi Shree</h5>
+            <p class="card-text">Aspiring Web Developer learning HTML, CSS, and Bootstrap. Passionate about technology and design.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hobbies Table -->
+      <div class="col-md-8">
+        <h3>My Hobbies</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Hobby</th>
+              <th>Why I Love It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Coding</td>
+              <td>Helps me build ideas</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Reading</td>
+              <td>Improves knowledge</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Traveling</td>
+              <td>Exploring new places is fun</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="mt-4">
+      <h3>Contact Me</h3>
+      <form>
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center mt-5 p-3">
+    &copy; 2025 Lakshmi Shree. All rights reserved.
+  </footer>
+
+</body>
+</html>

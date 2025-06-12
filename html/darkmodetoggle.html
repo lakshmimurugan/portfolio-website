@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Blog</a>
+
+      <!-- Toggle for small screen -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <!-- Search Form -->
+        <form class="d-flex me-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search blog..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <!-- Dark Mode Switch -->
+        <button class="btn btn-sm btn-warning me-2" id="toggleTheme">🌓</button>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Alert -->
+  <div class="container mt-3">
+    <div class="alert alert-success text-center">
+      Welcome to My Blog! Explore new posts and learn web development!
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <div class="row">
+
+      <!-- Blog Content -->
+      <div class="col-md-8">
+
+        <!-- Featured Post -->
+        <div class="card mb-4">
+          <img src="https://via.placeholder.com/800x300" class="card-img-top img-fluid" alt="Featured">
+          <div class="card-body">
+            <h2 class="card-title">Welcome to My Blog</h2>
+            <p class="card-text">This is a featured blog post. It’s informative and inspiring. Start reading and enjoy!</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+
+        <!-- Post Previews -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">How I Started Coding</h3>
+            <p class="card-text">Sharing my journey of how I became a web developer from scratch. Tips for beginners included!</p>
+            <a href="#" class="btn btn-outline-primary">Continue Reading</a>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Top 5 HTML & CSS Tips</h3>
+            <p class="card-text">Learn the most useful tips in HTML and CSS that every beginner should know.</p>
+            <a href="#" class="btn btn-outline-primary">Continue Reading</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">Categories</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">JavaScript</li>
+            <li class="list-group-item">Bootstrap</li>
+          </ul>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">About Me</h5>
+            <p class="card-text">I'm Lakshmi Shree, learning web design to build beautiful websites. I share my learning here!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    &copy; 2025 My Blog | Built with Bootstrap
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Password</label>
+              <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('toggleTheme');
+    const html = document.documentElement;
+
+    toggleBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-bs-theme');
+      html.setAttribute('data-bs-theme', current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+
+</body>
+</html>
